@@ -163,7 +163,7 @@
   background-color: #11998E;
 }
 .light-mode .switcher .switch {
-  background: #9E9E9E;
+  background: #e6e6e6;
 }
 .light-mode .switcher .switch:before {
   background: #11998E;
@@ -187,45 +187,157 @@
 .dark-mode {
   color: #F8F8F8;
   background-color: #0A524D;
+  /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 }
 .dark-mode .button-main {
-  border: solid 1px #F8F8F8;
+  border: solid 1px rgba(17, 153, 142, 0.5);
   background-color: rgba(17, 153, 142, 0.5);
   color: #F8F8F8;
 }
 .dark-mode .button-main:hover {
-  background-color: #F8F8F8;
-  color: #11998E;
+  background-color: #11998E;
 }
 .dark-mode .button-red {
-  border: solid 1px #DC3545;
-  background-color: #DC3545;
+  border: solid 1px rgba(220, 53, 69, 0.5);
+  background-color: rgba(220, 53, 69, 0.5);
   color: #F8F8F8;
 }
 .dark-mode .button-red:hover {
-  background-color: #F8F8F8;
-  color: #DC3545;
+  background-color: #DC3545;
 }
 .dark-mode .button-green {
-  border: solid 1px #28A745;
-  background-color: #28A745;
+  border: solid 1px rgba(40, 167, 69, 0.5);
+  background-color: rgba(40, 167, 69, 0.5);
   color: #F8F8F8;
 }
 .dark-mode .button-green:hover {
-  background-color: #F8F8F8;
-  color: #28A745;
+  background-color: #28A745;
 }
 .dark-mode .button-orange {
-  border: solid 1px #F39C13;
-  background-color: #F39C13;
+  border: solid 1px rgba(243, 156, 19, 0.5);
+  background-color: rgba(243, 156, 19, 0.5);
   color: #F8F8F8;
 }
 .dark-mode .button-orange:hover {
-  background-color: #F8F8F8;
-  color: #F39C13;
+  background-color: #F39C13;
+}
+.dark-mode .card {
+  background-color: #0C635C;
+}
+.dark-mode .card .card-header {
+  background-color: rgba(17, 153, 142, 0.75);
+  color: #F8F8F8;
+}
+.dark-mode .modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.dark-mode .input-text input {
+  border: 2px solid #F8F8F8;
+  background-color: #0A524D;
+  color: #F8F8F8;
+}
+.dark-mode .input-text input:focus {
+  border: 2px solid #11998E;
+}
+.dark-mode .input-text input:focus + label {
+  color: #11998E;
+}
+.dark-mode .input-text label {
+  color: #F8F8F8;
+  background-color: #0A524D;
+}
+.dark-mode .control input:focus ~ .control__indicator {
+  background: #9E9E9E;
+}
+.dark-mode .control input:checked ~ .control__indicator {
+  background: #11998E;
+}
+.dark-mode .control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.dark-mode .control input:checked:focus ~ .control__indicator {
+  background: #11998E;
+}
+.dark-mode .control input:disabled ~ .control__indicator {
+  background: #F8F8F8;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.dark-mode .control:hover input ~ .control__indicator {
+  background: #11998E;
+}
+.dark-mode .control:hover input:not([disabled]):checked ~ .control__indicator {
+  background: #11998E;
+}
+.dark-mode .control__indicator {
+  background: #e6e6e6;
+}
+.dark-mode .control--radio .control__indicator:after {
+  background: #FFFFFF;
+}
+.dark-mode .control--radio input:disabled ~ .control__indicator:after {
+  background: #9E9E9E;
+}
+.dark-mode .control--checkbox .control__indicator:after {
+  border: solid #FFFFFF;
+  background-color: #FFFFFF;
+}
+.dark-mode .control--checkbox .control__indicator input:disabled ~ .control__indicator:after {
+  border-color: #9E9E9E;
+}
+.dark-mode .select select {
+  background: #9E9E9E;
+  color: #201E1E;
+}
+.dark-mode .select select ~ .select__arrow {
+  border-top-color: #11998E;
+}
+.dark-mode .select select:hover {
+  color: #201E1E;
+  background: #e6e6e6;
+}
+.dark-mode .select select:focus {
+  color: #201E1E;
+  background: #e6e6e6;
+}
+.dark-mode .select__arrow {
+  border-color: #11998E transparent transparent transparent;
+}
+.dark-mode .default-table table thead {
+  background: #11998E;
+  color: #F8F8F8;
+}
+.dark-mode .default-table table tbody tr {
+  background: #0C635C;
+}
+.dark-mode .default-table table tbody tr:hover {
+  background: #0A524D;
+}
+.dark-mode .default-table table tbody tr td,
+.dark-mode .default-table table tbody tr td a {
+  color: #F8F8F8;
+}
+.dark-mode .default-table table tbody tr td fa-icon,
+.dark-mode .default-table table tbody tr td a fa-icon {
+  color: #F8F8F8;
+}
+.dark-mode .default-table table tbody tr:nth-child(odd) {
+  background-color: rgba(17, 153, 142, 0.75);
+  color: #F8F8F8;
+}
+.dark-mode .default-table table tbody tr:nth-child(odd) td,
+.dark-mode .default-table table tbody tr:nth-child(odd) td a {
+  color: #F8F8F8;
+}
+.dark-mode .default-table table tbody tr:nth-child(odd) td fa-icon,
+.dark-mode .default-table table tbody tr:nth-child(odd) td a fa-icon {
+  color: #F8F8F8;
+}
+.dark-mode .default-table table tbody tr:nth-child(odd):hover {
+  background-color: #0A524D;
 }
 .dark-mode .switcher .switch {
-  background: #9E9E9E;
+  background: #f9f9f9;
 }
 .dark-mode .switcher .switch:before {
   background: #11998E;
@@ -234,7 +346,7 @@
   background: rgba(17, 153, 142, 0.75);
 }
 .dark-mode .switcher input:checked + .switch {
-  background-color: #9E9E9E;
+  background-color: #f9f9f9;
 }
 .dark-mode .switcher input:checked + .switch:before {
   background: #11998E;
