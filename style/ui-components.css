@@ -63,12 +63,12 @@
   margin: auto;
 }
 
-.input-text-container {
+.input-text {
   width: 100%;
   position: relative;
   /* Interation */
 }
-.input-text-container input {
+.input-text input {
   width: 100%;
   border: 0;
   border: 2px solid #9e9e9e;
@@ -79,7 +79,7 @@
   height: 3rem;
   padding: 0px 10px;
 }
-.input-text-container label {
+.input-text label {
   padding: 0px 10px;
   top: 0;
   left: 0;
@@ -97,20 +97,20 @@
   pointer-events: none;
   font-weight: 700;
 }
-.input-text-container input,
-.input-text-container label {
+.input-text input,
+.input-text label {
   font-size: 1rem;
 }
-.input-text-container input:valid,
-.input-text-container input:focus {
+.input-text input:valid,
+.input-text input:focus {
   border: 2px solid #26a69a;
 }
-.input-text-container input:valid + label,
-.input-text-container input:focus + label {
+.input-text input:valid + label,
+.input-text input:focus + label {
   color: #26a69a;
 }
 
-.control {
+.input-checkbox {
   display: block;
   position: relative;
   padding-left: 30px;
@@ -118,22 +118,22 @@
   cursor: pointer;
   font-size: 18px;
 }
-.control input {
+.input-checkbox input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
-.control input:checked ~ .control__indicator:after {
+.input-checkbox input:checked ~ .control__indicator:after {
   display: block;
 }
-.control:hover + input ~ .control__indicator,
-.control input:focus ~ .control__indicator {
+.input-checkbox:hover + input ~ .control__indicator,
+.input-checkbox input:focus ~ .control__indicator {
   background: #ccc;
 }
-.control input:checked ~ .control__indicator {
+.input-checkbox input:checked ~ .control__indicator {
   background: #2aa1c0;
 }
-.control .control__indicator {
+.input-checkbox .control__indicator {
   position: absolute;
   top: 2px;
   left: 0;
@@ -141,7 +141,7 @@
   width: 20px;
   background: #e6e6e6;
 }
-.control .control__indicator:after {
+.input-checkbox .control__indicator:after {
   content: "";
   position: absolute;
   display: none;
