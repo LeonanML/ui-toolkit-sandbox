@@ -304,3 +304,46 @@
     border-width: 8px 5px 0 5px;
     border-color: #7b7b7b transparent transparent transparent;
 }
+
+.default-table {
+    table {
+        border-collapse: collapse;
+        thead {
+            background: #009585;
+            color: #ffffff;
+            tr {
+                th {
+                    padding: 5px 25px 5px 5px;
+                }
+            }
+        }
+        tbody tr {
+            transition: 0.5s;
+            td,
+            td a {
+                padding: 5px 25px 5px 5px;
+                color: #2d2d2d;
+                font-weight: 500;
+                fa-icon {
+                    color: #2d2d2d;
+                    font-size: 14px;
+                }
+            }
+        }
+        tbody tr:nth-child(odd) {
+            background-color: rgba(0, 149, 133, 0.5);
+            color: #fff;
+            td,
+            td a {
+                color: #fff;
+                fa-icon {
+                    color: #fff;
+                    font-size: 14px;
+                }
+            }
+            &:hover {
+                background-color: rgba(0, 149, 133, 0.8);
+            }
+        }
+    }
+}

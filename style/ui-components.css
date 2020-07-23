@@ -246,4 +246,45 @@
   border-color: #7b7b7b transparent transparent transparent;
 }
 
+.default-table table {
+  border-collapse: collapse;
+}
+.default-table table thead {
+  background: #009585;
+  color: #ffffff;
+}
+.default-table table thead tr th {
+  padding: 5px 25px 5px 5px;
+}
+.default-table table tbody tr {
+  transition: 0.5s;
+}
+.default-table table tbody tr td,
+.default-table table tbody tr td a {
+  padding: 5px 25px 5px 5px;
+  color: #2d2d2d;
+  font-weight: 500;
+}
+.default-table table tbody tr td fa-icon,
+.default-table table tbody tr td a fa-icon {
+  color: #2d2d2d;
+  font-size: 14px;
+}
+.default-table table tbody tr:nth-child(odd) {
+  background-color: rgba(0, 149, 133, 0.5);
+  color: #fff;
+}
+.default-table table tbody tr:nth-child(odd) td,
+.default-table table tbody tr:nth-child(odd) td a {
+  color: #fff;
+}
+.default-table table tbody tr:nth-child(odd) td fa-icon,
+.default-table table tbody tr:nth-child(odd) td a fa-icon {
+  color: #fff;
+  font-size: 14px;
+}
+.default-table table tbody tr:nth-child(odd):hover {
+  background-color: rgba(0, 149, 133, 0.8);
+}
+
 /*# sourceMappingURL=ui-components.css.map */
