@@ -1,0 +1,65 @@
+/* CSS Ui-Toolkit Components */
+* {
+  padding: 0px;
+  margin: 0px;
+  letter-spacing: 0.2px;
+  transition: 0.5s;
+}
+
+.no-horizontal-margin {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button-default {
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+.button-default:focus {
+  outline: none;
+}
+
+.card .card-header {
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 4px 4px 0px 0px;
+  font-weight: 700;
+}
+.card .card-content {
+  padding: 10px 20px;
+}
+.card .card-button {
+  padding: 20px 20px;
+}
+
+.modal {
+  display: none;
+  transition: 1s;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal .modal-content {
+  margin: auto;
+}
+
+/*# sourceMappingURL=ui-components.css.map */

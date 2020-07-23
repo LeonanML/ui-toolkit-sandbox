@@ -1,0 +1,66 @@
+/* CSS Ui-Toolkit Theme */
+
+//Theme Variables
+$white: #F8F8F8;
+$black: #201E1E;
+$grey: #9E9E9E;
+$lightGrey: #f9f9f9;
+$brand: #11998E;
+$transparent-brand: rgba(17, 153, 142, 0.5);
+$green: #28A745;
+$orange: #F39C13;
+$lightBlue: #3598DB;
+$darkBlue: #354A5F;
+$red: #DC3545;
+//END Theme Variables
+.light-mode {
+    color: $black;
+    .button-main {
+        border: solid 1px $brand;
+        background-color: $brand;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $brand;
+        }
+    }
+    .button-red {
+        border: solid 1px $red;
+        background-color: $red;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $red;
+        }
+    }
+    .button-green {
+        border: solid 1px $green;
+        background-color: $green;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $green;
+        }
+    }
+    .button-orange {
+        border: solid 1px $orange;
+        background-color: $orange;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $orange;
+        }
+    }
+    .card {
+        background-color: $lightGrey;
+        .card-header {
+            background-color: $transparent-brand;
+            color: $white;
+        }
+        .card-content {}
+    }
+}
+
+.dark-mode {
+    color: $white;
+}
