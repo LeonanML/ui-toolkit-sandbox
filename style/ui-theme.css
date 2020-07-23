@@ -1,6 +1,7 @@
 /* CSS Ui-Toolkit Theme */
 .light-mode {
   color: #201E1E;
+  background-color: #FFFFFF;
 }
 .light-mode .button-main {
   border: solid 1px #11998E;
@@ -45,6 +46,137 @@
   background-color: rgba(17, 153, 142, 0.75);
   color: #F8F8F8;
 }
+.light-mode .modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.light-mode .input-text input {
+  border: 2px solid #9E9E9E;
+}
+.light-mode .input-text input:focus {
+  border: 2px solid #11998E;
+}
+.light-mode .input-text input:focus + label {
+  color: #11998E;
+}
+.light-mode .input-text label {
+  color: #9E9E9E;
+  background-color: #FFFFFF;
+}
+.light-mode .control input:focus ~ .control__indicator {
+  background: #9E9E9E;
+}
+.light-mode .control input:checked ~ .control__indicator {
+  background: #11998E;
+}
+.light-mode .control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.light-mode .control input:checked:focus ~ .control__indicator {
+  background: #11998E;
+}
+.light-mode .control input:disabled ~ .control__indicator {
+  background: #F8F8F8;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.light-mode .control:hover input ~ .control__indicator {
+  background: #11998E;
+}
+.light-mode .control:hover input:not([disabled]):checked ~ .control__indicator {
+  background: #11998E;
+}
+.light-mode .control__indicator {
+  background: #e6e6e6;
+}
+.light-mode .control--radio .control__indicator:after {
+  background: #FFFFFF;
+}
+.light-mode .control--radio input:disabled ~ .control__indicator:after {
+  background: #9E9E9E;
+}
+.light-mode .control--checkbox .control__indicator:after {
+  border: solid #FFFFFF;
+  background-color: #FFFFFF;
+}
+.light-mode .control--checkbox .control__indicator input:disabled ~ .control__indicator:after {
+  border-color: #9E9E9E;
+}
+.light-mode .select select {
+  background: #e6e6e6;
+  color: #6A6A6A;
+}
+.light-mode .select select:hover {
+  color: #201E1E;
+  background: #e6e6e6;
+}
+.light-mode .select select:hover ~ .select__arrow {
+  border-top-color: #11998E;
+}
+.light-mode .select select:focus {
+  color: #201E1E;
+  background: #e6e6e6;
+}
+.light-mode .select select:focus ~ .select__arrow {
+  border-top-color: #11998E;
+}
+.light-mode .select select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.light-mode .select select:disabled ~ .select__arrow {
+  border-top-color: #11998E;
+}
+.light-mode .select__arrow {
+  border-color: #9E9E9E transparent transparent transparent;
+}
+.light-mode .default-table table thead {
+  background: #11998E;
+  color: #F8F8F8;
+}
+.light-mode .default-table table tbody tr {
+  background: #f9f9f9;
+}
+.light-mode .default-table table tbody tr:hover {
+  background: #e6e6e6;
+}
+.light-mode .default-table table tbody tr td,
+.light-mode .default-table table tbody tr td a {
+  color: #201E1E;
+}
+.light-mode .default-table table tbody tr td fa-icon,
+.light-mode .default-table table tbody tr td a fa-icon {
+  color: #201E1E;
+}
+.light-mode .default-table table tbody tr:nth-child(odd) {
+  background-color: rgba(17, 153, 142, 0.75);
+  color: #F8F8F8;
+}
+.light-mode .default-table table tbody tr:nth-child(odd) td,
+.light-mode .default-table table tbody tr:nth-child(odd) td a {
+  color: #F8F8F8;
+}
+.light-mode .default-table table tbody tr:nth-child(odd) td fa-icon,
+.light-mode .default-table table tbody tr:nth-child(odd) td a fa-icon {
+  color: #F8F8F8;
+}
+.light-mode .default-table table tbody tr:nth-child(odd):hover {
+  background-color: #11998E;
+}
+.light-mode div.checkbox.switcher label input + span,
+.light-mode div.radio.switcher label input + span {
+  background: #e6e6e6;
+  border: 1px solid #9E9E9E;
+}
+.light-mode div.checkbox.switcher label input + span small,
+.light-mode div.radio.switcher label input + span small {
+  background: #F8F8F8;
+}
+.light-mode div.checkbox.switcher label input:checked + span,
+.light-mode div.radio.switcher label input:checked + span {
+  background: #11998E;
+  border-color: #11998E;
+}
+
 .dark-mode {
   color: #F8F8F8;
 }

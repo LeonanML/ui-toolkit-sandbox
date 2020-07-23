@@ -54,10 +54,9 @@
   transition: 1s;
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
 }
 .modal .modal-content {
   margin: auto;
@@ -66,12 +65,10 @@
 .input-text {
   width: 100%;
   position: relative;
-  /* Interation */
 }
 .input-text input {
   width: 100%;
   border: 0;
-  border: 2px solid #9e9e9e;
   border-radius: 4px;
   outline: none;
   transition: 0.2s ease-in-out;
@@ -83,9 +80,7 @@
   padding: 0px 10px;
   top: 0;
   left: 0;
-  color: #616161;
   display: flex;
-  background-color: #ffffff;
   align-items: center;
   position: absolute;
   cursor: text;
@@ -101,14 +96,6 @@
 .input-text label {
   font-size: 1rem;
 }
-.input-text input:valid,
-.input-text input:focus {
-  border: 2px solid #26a69a;
-}
-.input-text input:valid + label,
-.input-text input:focus + label {
-  color: #26a69a;
-}
 
 .control {
   display: block;
@@ -122,29 +109,6 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
-}
-.control input:focus ~ .control__indicator {
-  background: #ccc;
-}
-.control input:checked ~ .control__indicator {
-  background: #2aa1c0;
-}
-.control input:checked ~ .control__indicator:after {
-  display: block;
-}
-.control input:checked:focus ~ .control__indicator {
-  background: #0e647d;
-}
-.control input:disabled ~ .control__indicator {
-  background: #e6e6e6;
-  opacity: 0.6;
-  pointer-events: none;
-}
-.control:hover input ~ .control__indicator {
-  background: #ccc;
-}
-.control:hover input:not([disabled]):checked ~ .control__indicator {
-  background: #0e647d;
 }
 
 .control__indicator {
@@ -170,23 +134,13 @@
   height: 6px;
   width: 6px;
   border-radius: 50%;
-  background: #fff;
-}
-.control--radio input:disabled ~ .control__indicator:after {
-  background: #7b7b7b;
 }
 
 .control--checkbox .control__indicator:after {
-  left: 8px;
-  top: 4px;
-  width: 3px;
-  height: 8px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-.control--checkbox input:disabled ~ .control__indicator:after {
-  border-color: #7b7b7b;
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
 }
 
 .select {
@@ -203,35 +157,12 @@
   outline: 0;
   border: 0;
   border-radius: 0;
-  background: #e6e6e6;
-  color: #7b7b7b;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 .select select::-ms-expand {
-  display: none;
-}
-.select select:hover {
-  color: #000;
-  background: #ccc;
-}
-.select select:hover ~ .select__arrow {
-  border-top-color: #000;
-}
-.select select:focus {
-  color: #000;
-  background: #ccc;
-}
-.select select:focus ~ .select__arrow {
-  border-top-color: #000;
-}
-.select select:disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-.select select:disabled ~ .select__arrow {
-  border-top-color: #ccc;
+  padding: 10px 15px;
 }
 
 .select__arrow {
@@ -243,15 +174,10 @@
   pointer-events: none;
   border-style: solid;
   border-width: 8px 5px 0 5px;
-  border-color: #7b7b7b transparent transparent transparent;
 }
 
 .default-table table {
   border-collapse: collapse;
-}
-.default-table table thead {
-  background: #009585;
-  color: #ffffff;
 }
 .default-table table thead tr th {
   padding: 5px 25px 5px 5px;
@@ -262,29 +188,15 @@
 .default-table table tbody tr td,
 .default-table table tbody tr td a {
   padding: 5px 25px 5px 5px;
-  color: #2d2d2d;
   font-weight: 500;
 }
 .default-table table tbody tr td fa-icon,
 .default-table table tbody tr td a fa-icon {
-  color: #2d2d2d;
   font-size: 14px;
-}
-.default-table table tbody tr:nth-child(odd) {
-  background-color: rgba(0, 149, 133, 0.5);
-  color: #fff;
-}
-.default-table table tbody tr:nth-child(odd) td,
-.default-table table tbody tr:nth-child(odd) td a {
-  color: #fff;
 }
 .default-table table tbody tr:nth-child(odd) td fa-icon,
 .default-table table tbody tr:nth-child(odd) td a fa-icon {
-  color: #fff;
   font-size: 14px;
-}
-.default-table table tbody tr:nth-child(odd):hover {
-  background-color: rgba(0, 149, 133, 0.8);
 }
 
 div.checkbox.switcher label,
@@ -306,8 +218,6 @@ div.radio.switcher label input + span {
   margin-right: 10px;
   width: 56px;
   height: 28px;
-  background: #f2f2f2;
-  border: 1px solid #eee;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
 }
@@ -317,15 +227,9 @@ div.radio.switcher label input + span small {
   display: block;
   width: 50%;
   height: 100%;
-  background: #fff;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
   left: 0;
-}
-div.checkbox.switcher label input:checked + span,
-div.radio.switcher label input:checked + span {
-  background: #269bff;
-  border-color: #269bff;
 }
 div.checkbox.switcher label input:checked + span small,
 div.radio.switcher label input:checked + span small {

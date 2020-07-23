@@ -1,12 +1,16 @@
 /* CSS Ui-Toolkit Theme */
 
 //Theme Variables
+$whiteBackground: #FFFFFF;
 $white: #F8F8F8;
 $black: #201E1E;
+$darkGrey: #6A6A6A;
 $grey: #9E9E9E;
+$secondaryGrey: #e6e6e6;
 $lightGrey: #f9f9f9;
 $brand: #11998E;
 $transparent-brand: rgba(17, 153, 142, 0.75);
+$transparent-black: rgba(0, 0, 0, 0.5);
 $green: #28A745;
 $orange: #F39C13;
 $lightBlue: #3598DB;
@@ -15,6 +19,7 @@ $red: #DC3545;
 //END Theme Variables
 .light-mode {
     color: $black;
+    background-color: $whiteBackground;
     .button-main {
         border: solid 1px $brand;
         background-color: $brand;
@@ -57,10 +62,210 @@ $red: #DC3545;
             background-color: $transparent-brand;
             color: $white;
         }
-        .card-content {}
     }
-}
-
+    .modal {
+        background-color: $transparent-black;
+    }
+    .input-text {
+        input {
+            border: 2px solid $grey;
+        }
+        input:focus {
+            border: 2px solid $brand;
+        }
+        input:focus+label {
+            color: $brand;
+        }
+        label {
+            color: $grey;
+            background-color: $whiteBackground;
+        }
+    }
+    .control {
+        input {
+            &:focus {
+                ~ {
+                    .control__indicator {
+                        background: $grey;
+                    }
+                }
+            }
+            &:checked {
+                ~ {
+                    .control__indicator {
+                        background: $brand;
+                        &:after {
+                            display: block;
+                        }
+                    }
+                }
+                &:focus {
+                    ~ {
+                        .control__indicator {
+                            background: $brand;
+                        }
+                    }
+                }
+            }
+            &:disabled {
+                ~ {
+                    .control__indicator {
+                        background: $white;
+                        opacity: 0.6;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+        &:hover {
+            input {
+                ~ {
+                    .control__indicator {
+                        background: $brand;
+                    }
+                }
+                &:not([disabled]) {
+                    &:checked {
+                        ~ {
+                            .control__indicator {
+                                background: $brand;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .control__indicator {
+        background: $secondaryGrey;
+    }
+    .control--radio {
+        .control__indicator {
+            &:after {
+                background: $whiteBackground;
+            }
+        }
+        input {
+            &:disabled {
+                ~ {
+                    .control__indicator {
+                        &:after {
+                            background: $grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .control--checkbox {
+        .control__indicator {
+            &:after {
+                border: solid $whiteBackground;
+                background-color: $whiteBackground;
+            }
+            input {
+                &:disabled {
+                    ~ {
+                        .control__indicator {
+                            &:after {
+                                border-color: $grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .select {
+        select {
+            background: $secondaryGrey;
+            color: $darkGrey;
+            &:hover {
+                color: $black;
+                background: $secondaryGrey;
+                ~ {
+                    .select__arrow {
+                        border-top-color: $brand;
+                    }
+                }
+            }
+            &:focus {
+                color: $black;
+                background: $secondaryGrey;
+                ~ {
+                    .select__arrow {
+                        border-top-color: $brand;
+                    }
+                }
+            }
+            &:disabled {
+                opacity: 0.5;
+                pointer-events: none;
+                ~ {
+                    .select__arrow {
+                        border-top-color: $brand;
+                    }
+                }
+            }
+        }
+    }
+    .select__arrow {
+        border-color: $grey transparent transparent transparent;
+    }
+    .default-table {
+        table {
+            thead {
+                background: $brand;
+                color: $white;
+            }
+            tbody tr {
+                background: $lightGrey;
+                &:hover {
+                    background: $secondaryGrey;
+                }
+                td,
+                td a {
+                    color: $black;
+                    fa-icon {
+                        color: $black;
+                    }
+                }
+            }
+            tbody tr:nth-child(odd) {
+                background-color: $transparent-brand;
+                color: $white;
+                td,
+                td a {
+                    color: $white;
+                    fa-icon {
+                        color: $white;
+                    }
+                }
+                &:hover {
+                    background-color: $brand;
+                }
+            }
+        }
+    }
+    div.checkbox.switcher,
+    div.radio.switcher {
+        label {
+            input {
+                &+span {
+                    background: $secondaryGrey;
+                    border: 1px solid $grey;
+                    small {
+                        background: $white;
+                    }
+                }
+                &:checked+span {
+                    background: $brand;
+                    border-color: $brand;
+                }
+            }
+        }
+    }
+} //END light mode
 .dark-mode {
     color: $white;
-}
+} //END dark mode

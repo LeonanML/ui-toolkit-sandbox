@@ -57,10 +57,9 @@
     transition: 1s;
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
     .modal-content {
         margin: auto;
     }
@@ -72,7 +71,6 @@
     input {
         width: 100%;
         border: 0;
-        border: 2px solid #9e9e9e;
         border-radius: 4px;
         outline: none;
         transition: .2s ease-in-out;
@@ -84,9 +82,7 @@
         padding: 0px 10px;
         top: 0;
         left: 0;
-        color: #616161;
         display: flex;
-        background-color: #ffffff;
         align-items: center;
         position: absolute;
         cursor: text;
@@ -102,15 +98,6 @@
     label {
         font-size: 1rem;
     }
-    /* Interation */
-    input:valid,
-    input:focus {
-        border: 2px solid #26a69a;
-    }
-    input:valid+label,
-    input:focus+label {
-        color: #26a69a;
-    }
 }
 
 .control {
@@ -124,57 +111,6 @@
         position: absolute;
         z-index: -1;
         opacity: 0;
-        &:focus {
-            ~ {
-                .control__indicator {
-                    background: #ccc;
-                }
-            }
-        }
-        &:checked {
-            ~ {
-                .control__indicator {
-                    background: #2aa1c0;
-                    &:after {
-                        display: block;
-                    }
-                }
-            }
-            &:focus {
-                ~ {
-                    .control__indicator {
-                        background: #0e647d;
-                    }
-                }
-            }
-        }
-        &:disabled {
-            ~ {
-                .control__indicator {
-                    background: #e6e6e6;
-                    opacity: 0.6;
-                    pointer-events: none;
-                }
-            }
-        }
-    }
-    &:hover {
-        input {
-            ~ {
-                .control__indicator {
-                    background: #ccc;
-                }
-            }
-            &:not([disabled]) {
-                &:checked {
-                    ~ {
-                        .control__indicator {
-                            background: #0e647d;
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -201,18 +137,6 @@
             height: 6px;
             width: 6px;
             border-radius: 50%;
-            background: #fff;
-        }
-    }
-    input {
-        &:disabled {
-            ~ {
-                .control__indicator {
-                    &:after {
-                        background: #7b7b7b;
-                    }
-                }
-            }
         }
     }
 }
@@ -220,24 +144,10 @@
 .control--checkbox {
     .control__indicator {
         &:after {
-            left: 8px;
-            top: 4px;
-            width: 3px;
-            height: 8px;
-            border: solid #fff;
-            border-width: 0 2px 2px 0;
-            transform: rotate(45deg);
-        }
-    }
-    input {
-        &:disabled {
-            ~ {
-                .control__indicator {
-                    &:after {
-                        border-color: #7b7b7b;
-                    }
-                }
-            }
+            left: 5px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
         }
     }
 }
@@ -255,40 +165,11 @@
         outline: 0;
         border: 0;
         border-radius: 0;
-        background: #e6e6e6;
-        color: #7b7b7b;
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
         &::-ms-expand {
-            display: none;
-        }
-        &:hover {
-            color: #000;
-            background: #ccc;
-            ~ {
-                .select__arrow {
-                    border-top-color: #000;
-                }
-            }
-        }
-        &:focus {
-            color: #000;
-            background: #ccc;
-            ~ {
-                .select__arrow {
-                    border-top-color: #000;
-                }
-            }
-        }
-        &:disabled {
-            opacity: 0.5;
-            pointer-events: none;
-            ~ {
-                .select__arrow {
-                    border-top-color: #ccc;
-                }
-            }
+            padding: 10px 15px;
         }
     }
 }
@@ -302,15 +183,12 @@
     pointer-events: none;
     border-style: solid;
     border-width: 8px 5px 0 5px;
-    border-color: #7b7b7b transparent transparent transparent;
 }
 
 .default-table {
     table {
         border-collapse: collapse;
         thead {
-            background: #009585;
-            color: #ffffff;
             tr {
                 th {
                     padding: 5px 25px 5px 5px;
@@ -322,27 +200,18 @@
             td,
             td a {
                 padding: 5px 25px 5px 5px;
-                color: #2d2d2d;
                 font-weight: 500;
                 fa-icon {
-                    color: #2d2d2d;
                     font-size: 14px;
                 }
             }
         }
         tbody tr:nth-child(odd) {
-            background-color: rgba(0, 149, 133, 0.5);
-            color: #fff;
             td,
             td a {
-                color: #fff;
                 fa-icon {
-                    color: #fff;
                     font-size: 14px;
                 }
-            }
-            &:hover {
-                background-color: rgba(0, 149, 133, 0.8);
             }
         }
     }
@@ -363,8 +232,6 @@ div.radio.switcher {
                 margin-right: 10px;
                 width: 56px;
                 height: 28px;
-                background: #f2f2f2;
-                border: 1px solid #eee;
                 border-radius: 50px;
                 transition: all 0.3s ease-in-out;
                 small {
@@ -372,15 +239,12 @@ div.radio.switcher {
                     display: block;
                     width: 50%;
                     height: 100%;
-                    background: #fff;
                     border-radius: 50%;
                     transition: all 0.3s ease-in-out;
                     left: 0;
                 }
             }
             &:checked+span {
-                background: #269bff;
-                border-color: #269bff;
                 small {
                     left: 50%;
                 }
