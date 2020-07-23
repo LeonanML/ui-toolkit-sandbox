@@ -247,20 +247,27 @@ $red: #DC3545;
             }
         }
     }
-    div.checkbox.switcher,
-    div.radio.switcher {
-        label {
-            input {
-                &+span {
-                    background: $secondaryGrey;
-                    border: 1px solid $grey;
-                    small {
-                        background: $white;
-                    }
-                }
-                &:checked+span {
+    .switcher {
+        .switch {
+            background: $grey;
+            &:before {
+                background: $brand;
+            }
+            &:after {
+                background: $transparent-brand;
+            }
+        }
+        input:checked+.switch {
+            background-color: $brand;
+            &:before {
+                background: $brand;
+            }
+            &:after {
+                background: $transparent-brand;
+            }
+            &:active {
+                &:before {
                     background: $brand;
-                    border-color: $brand;
                 }
             }
         }
@@ -268,4 +275,24 @@ $red: #DC3545;
 } //END light mode
 .dark-mode {
     color: $white;
+    .switcher {
+        .switch {
+            background: $grey;
+            &:before {
+                background: $brand;
+            }
+            &:after {
+                background: $transparent-brand;
+            }
+        }
+        input:checked+.switch {
+            background-color: $grey;
+            &:before {
+                background: $brand;
+            }
+            &:after {
+                background: $brand;
+            }
+        }
+    }
 } //END dark mode

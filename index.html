@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="light-mode">
+<body class="light-mode" id="body">
     <div class="section">
         <div class="container">
             <div class="row">
@@ -205,28 +205,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="checkbox switcher">
-                        <label for="test">
-                          <input type="checkbox" id="test" value="">
-                          <span><small></small></span>
-                          <small>Switch</small>
-                        </label>
+                    <div class="switcher">
+                        <input id="switchDarkMode" onchange="swtichDarkMode()" type="checkbox" hidden/>
+                        <label for="switchDarkMode" class="switch"></label>
+                        <p>Switch to dark mode</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
 
     <script>
         function showModal() {
@@ -236,6 +223,26 @@
         function closeModal() {
             document.getElementById('modal_1').style.display = 'none';
         }
+
+        /* swtichDarkMode */
+        window.onload = function() {
+            swtichDarkMode()
+
+        };
+
+        function swtichDarkMode() {
+            var checkBox = document.getElementById("switchDarkMode");
+            var body = document.getElementById("body");
+            console.log("checkBox.checked>", checkBox.checked)
+            if (checkBox.checked == false) {
+                body.classList.remove("dark-mode");
+                body.classList.add("light-mode");
+            } else {
+                body.classList.remove("light-mode");
+                body.classList.add("dark-mode")
+            }
+        }
+        /* END swtichDarkMode*/
     </script>
 </body>
 

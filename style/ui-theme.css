@@ -162,23 +162,48 @@
 .light-mode .default-table table tbody tr:nth-child(odd):hover {
   background-color: #11998E;
 }
-.light-mode div.checkbox.switcher label input + span,
-.light-mode div.radio.switcher label input + span {
-  background: #e6e6e6;
-  border: 1px solid #9E9E9E;
+.light-mode .switcher .switch {
+  background: #9E9E9E;
 }
-.light-mode div.checkbox.switcher label input + span small,
-.light-mode div.radio.switcher label input + span small {
-  background: #F8F8F8;
-}
-.light-mode div.checkbox.switcher label input:checked + span,
-.light-mode div.radio.switcher label input:checked + span {
+.light-mode .switcher .switch:before {
   background: #11998E;
-  border-color: #11998E;
+}
+.light-mode .switcher .switch:after {
+  background: rgba(17, 153, 142, 0.75);
+}
+.light-mode .switcher input:checked + .switch {
+  background-color: #11998E;
+}
+.light-mode .switcher input:checked + .switch:before {
+  background: #11998E;
+}
+.light-mode .switcher input:checked + .switch:after {
+  background: rgba(17, 153, 142, 0.75);
+}
+.light-mode .switcher input:checked + .switch:active:before {
+  background: #11998E;
 }
 
 .dark-mode {
   color: #F8F8F8;
+}
+.dark-mode .switcher .switch {
+  background: #9E9E9E;
+}
+.dark-mode .switcher .switch:before {
+  background: #11998E;
+}
+.dark-mode .switcher .switch:after {
+  background: rgba(17, 153, 142, 0.75);
+}
+.dark-mode .switcher input:checked + .switch {
+  background-color: #9E9E9E;
+}
+.dark-mode .switcher input:checked + .switch:before {
+  background: #11998E;
+}
+.dark-mode .switcher input:checked + .switch:after {
+  background: #11998E;
 }
 
 /*# sourceMappingURL=ui-theme.css.map */
