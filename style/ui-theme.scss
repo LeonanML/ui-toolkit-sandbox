@@ -8,8 +8,10 @@ $darkGrey: #6A6A6A;
 $grey: #9E9E9E;
 $secondaryGrey: #e6e6e6;
 $lightGrey: #f9f9f9;
+$darkBrand: #0A524D;
 $brand: #11998E;
 $transparent-brand: rgba(17, 153, 142, 0.75);
+$transparent-brand2: rgba(17, 153, 142, 0.5);
 $transparent-black: rgba(0, 0, 0, 0.5);
 $green: #28A745;
 $orange: #F39C13;
@@ -275,6 +277,43 @@ $red: #DC3545;
 } //END light mode
 .dark-mode {
     color: $white;
+    background-color: $darkBrand;
+    .button-main {
+        border: solid 1px $white;
+        background-color: $transparent-brand2;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $brand;
+        }
+    }
+    .button-red {
+        border: solid 1px $red;
+        background-color: $red;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $red;
+        }
+    }
+    .button-green {
+        border: solid 1px $green;
+        background-color: $green;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $green;
+        }
+    }
+    .button-orange {
+        border: solid 1px $orange;
+        background-color: $orange;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $orange;
+        }
+    }
     .switcher {
         .switch {
             background: $grey;

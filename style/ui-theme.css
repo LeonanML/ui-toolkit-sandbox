@@ -186,6 +186,43 @@
 
 .dark-mode {
   color: #F8F8F8;
+  background-color: #0A524D;
+}
+.dark-mode .button-main {
+  border: solid 1px #F8F8F8;
+  background-color: rgba(17, 153, 142, 0.5);
+  color: #F8F8F8;
+}
+.dark-mode .button-main:hover {
+  background-color: #F8F8F8;
+  color: #11998E;
+}
+.dark-mode .button-red {
+  border: solid 1px #DC3545;
+  background-color: #DC3545;
+  color: #F8F8F8;
+}
+.dark-mode .button-red:hover {
+  background-color: #F8F8F8;
+  color: #DC3545;
+}
+.dark-mode .button-green {
+  border: solid 1px #28A745;
+  background-color: #28A745;
+  color: #F8F8F8;
+}
+.dark-mode .button-green:hover {
+  background-color: #F8F8F8;
+  color: #28A745;
+}
+.dark-mode .button-orange {
+  border: solid 1px #F39C13;
+  background-color: #F39C13;
+  color: #F8F8F8;
+}
+.dark-mode .button-orange:hover {
+  background-color: #F8F8F8;
+  color: #F39C13;
 }
 .dark-mode .switcher .switch {
   background: #9E9E9E;
