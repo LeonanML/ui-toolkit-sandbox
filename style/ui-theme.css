@@ -42,7 +42,7 @@
   background-color: #f9f9f9;
 }
 .light-mode .card .card-header {
-  background-color: rgba(17, 153, 142, 0.5);
+  background-color: rgba(17, 153, 142, 0.75);
   color: #F8F8F8;
 }
 .dark-mode {
