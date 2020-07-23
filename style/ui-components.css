@@ -49,6 +49,7 @@
 }
 
 .modal {
+  z-index: 98;
   display: none;
   transition: 1s;
   top: 0;
@@ -60,6 +61,53 @@
 }
 .modal .modal-content {
   margin: auto;
+}
+
+.input-text-container {
+  width: 100%;
+  position: relative;
+  /* Interation */
+}
+.input-text-container input {
+  width: 100%;
+  border: 0;
+  border: 2px solid #9e9e9e;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box;
+  height: 3rem;
+  padding: 0px 10px;
+}
+.input-text-container label {
+  padding: 0px 10px;
+  top: 0;
+  left: 0;
+  color: #616161;
+  display: flex;
+  background-color: #ffffff;
+  align-items: center;
+  position: absolute;
+  cursor: text;
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  top: -6px;
+  left: 6px;
+  pointer-events: none;
+  font-weight: 700;
+}
+.input-text-container input,
+.input-text-container label {
+  font-size: 1rem;
+}
+.input-text-container input:valid,
+.input-text-container input:focus {
+  border: 2px solid #26a69a;
+}
+.input-text-container input:valid + label,
+.input-text-container input:focus + label {
+  color: #26a69a;
 }
 
 /*# sourceMappingURL=ui-components.css.map */
