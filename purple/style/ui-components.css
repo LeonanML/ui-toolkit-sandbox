@@ -1,0 +1,237 @@
+/* CSS Ui-Toolkit Components */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  letter-spacing: 0.2px;
+  transition: 0.5s;
+  font-family: "Roboto", sans-serif;
+}
+
+.no-horizontal-margin {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button-default {
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+.button-default:focus {
+  outline: none;
+}
+
+.card .card-header {
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 4px 4px 0px 0px;
+  font-weight: 700;
+}
+.card .card-content {
+  padding: 10px 20px;
+}
+.card .card-button {
+  padding: 20px 20px;
+}
+
+.modal {
+  z-index: 98;
+  display: none;
+  transition: 1s;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.modal .modal-content {
+  margin: 3rem auto;
+}
+
+.input-text {
+  width: 100%;
+  position: relative;
+}
+.input-text input {
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box;
+  height: 3rem;
+  padding: 0px 10px;
+}
+.input-text label {
+  padding: 0px 10px;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  cursor: text;
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  top: -6px;
+  left: 6px;
+  pointer-events: none;
+  font-weight: 700;
+}
+.input-text input,
+.input-text label {
+  font-size: 1rem;
+}
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+}
+.control__indicator:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+.control--radio .control__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+}
+
+.control--checkbox .control__indicator:after {
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.select select::-ms-expand {
+  padding: 10px 15px;
+}
+
+.select__arrow {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+}
+
+.default-table table {
+  border-collapse: collapse;
+}
+.default-table table thead tr th {
+  padding: 5px 25px 5px 5px;
+}
+.default-table table tbody tr {
+  transition: 0.5s;
+}
+.default-table table tbody tr td,
+.default-table table tbody tr td a {
+  padding: 5px 25px 5px 5px;
+  font-weight: 500;
+}
+.default-table table tbody tr td fa-icon,
+.default-table table tbody tr td a fa-icon {
+  font-size: 14px;
+}
+.default-table table tbody tr:nth-child(odd) td fa-icon,
+.default-table table tbody tr:nth-child(odd) td a fa-icon {
+  font-size: 14px;
+}
+
+.switcher .switch {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  padding: 4px;
+  border-radius: 20px;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.switcher .switch:before, .switcher .switch:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+}
+.switcher .switch:before {
+  transform: translate3d(0, -50%, 0) scale(0);
+}
+.switcher .switch:after {
+  transform: translate3d(-15%, -50%, 0);
+}
+.switcher input:checked + .switch:before {
+  transform: translate3d(100%, -50%, 0) scale(1);
+}
+.switcher input:checked + .switch:after {
+  transform: translate3d(100%, -50%, 0);
+}
+
+/*# sourceMappingURL=ui-components.css.map */

@@ -1,0 +1,518 @@
+/* CSS Ui-Toolkit Theme */
+
+//Theme Variables
+$whiteBackground: #FFFFFF;
+$white: #F8F8F8;
+$black: #201E1E;
+$darkGrey: #6A6A6A;
+$grey: #9E9E9E;
+$secondaryGrey: #e6e6e6;
+$lightGrey: #f9f9f9;
+$darkBrand: #341352;
+$secondaryDark: #471F6B;
+$brand: #7718B0;
+$transparent-brand: rgba(#7718B0, 0.75);
+$transparent-brand2: rgba(#7718B0, 0.5);
+$transparent-black: rgba(0, 0, 0, 0.5);
+$green: #28A745;
+$orange: #F39C13;
+$lightBlue: #3598DB;
+$darkBlue: #354A5F;
+$red: #DC3545;
+//END Theme Variables
+.light-mode {
+    color: $black;
+    background-color: $whiteBackground;
+    .button-main {
+        border: solid 1px $brand;
+        background-color: $brand;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $brand;
+        }
+    }
+    .button-red {
+        border: solid 1px $red;
+        background-color: $red;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $red;
+        }
+    }
+    .button-green {
+        border: solid 1px $green;
+        background-color: $green;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $green;
+        }
+    }
+    .button-orange {
+        border: solid 1px $orange;
+        background-color: $orange;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $orange;
+        }
+    }
+    .card {
+        background-color: $lightGrey;
+        .card-header {
+            background-color: $transparent-brand;
+            color: $white;
+        }
+    }
+    .modal {
+        background-color: $transparent-black;
+    }
+    .input-text {
+        input {
+            border: 2px solid $grey;
+        }
+        input:focus {
+            border: 2px solid $brand;
+        }
+        input:focus+label {
+            color: $brand;
+        }
+        label {
+            color: $grey;
+            background-color: $whiteBackground;
+        }
+    }
+    .control {
+        input {
+            &:focus {
+                ~ {
+                    .control__indicator {
+                        background: $grey;
+                    }
+                }
+            }
+            &:checked {
+                ~ {
+                    .control__indicator {
+                        background: $brand;
+                        &:after {
+                            display: block;
+                        }
+                    }
+                }
+                &:focus {
+                    ~ {
+                        .control__indicator {
+                            background: $brand;
+                        }
+                    }
+                }
+            }
+            &:disabled {
+                ~ {
+                    .control__indicator {
+                        background: $white;
+                        opacity: 0.6;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+        &:hover {
+            input {
+                ~ {
+                    .control__indicator {
+                        background: $brand;
+                    }
+                }
+                &:not([disabled]) {
+                    &:checked {
+                        ~ {
+                            .control__indicator {
+                                background: $brand;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .control__indicator {
+        background: $secondaryGrey;
+    }
+    .control--radio {
+        .control__indicator {
+            &:after {
+                background: $whiteBackground;
+            }
+        }
+        input {
+            &:disabled {
+                ~ {
+                    .control__indicator {
+                        &:after {
+                            background: $grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .control--checkbox {
+        .control__indicator {
+            &:after {
+                border: solid $whiteBackground;
+                background-color: $whiteBackground;
+            }
+            input {
+                &:disabled {
+                    ~ {
+                        .control__indicator {
+                            &:after {
+                                border-color: $grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .select {
+        select {
+            background: $secondaryGrey;
+            color: $darkGrey;
+            &:hover {
+                color: $black;
+                background: $secondaryGrey;
+                ~ {
+                    .select__arrow {
+                        border-top-color: $brand;
+                    }
+                }
+            }
+            &:focus {
+                color: $black;
+                background: $secondaryGrey;
+                ~ {
+                    .select__arrow {
+                        border-top-color: $brand;
+                    }
+                }
+            }
+            &:disabled {
+                opacity: 0.5;
+                pointer-events: none;
+                ~ {
+                    .select__arrow {
+                        border-top-color: $brand;
+                    }
+                }
+            }
+        }
+    }
+    .select__arrow {
+        border-color: $grey transparent transparent transparent;
+    }
+    .default-table {
+        table {
+            thead {
+                background: $brand;
+                color: $white;
+            }
+            tbody tr {
+                background: $lightGrey;
+                &:hover {
+                    background: $secondaryGrey;
+                }
+                td,
+                td a {
+                    color: $black;
+                    fa-icon {
+                        color: $black;
+                    }
+                }
+            }
+            tbody tr:nth-child(odd) {
+                background-color: $transparent-brand;
+                color: $white;
+                td,
+                td a {
+                    color: $white;
+                    fa-icon {
+                        color: $white;
+                    }
+                }
+                &:hover {
+                    background-color: $brand;
+                }
+            }
+        }
+    }
+    .switcher {
+        .switch {
+            background: $secondaryGrey;
+            &:before {
+                background: $brand;
+            }
+            &:after {
+                background: $transparent-brand;
+            }
+        }
+        input:checked+.switch {
+            background-color: $brand;
+            &:before {
+                background: $brand;
+            }
+            &:after {
+                background: $transparent-brand;
+            }
+            &:active {
+                &:before {
+                    background: $brand;
+                }
+            }
+        }
+    }
+} //END light mode
+.dark-mode {
+    color: $white;
+    background-color: $darkBrand;
+    .button-main {
+        border: solid 1px rgba($brand, 0.5);
+        background-color: $white;
+        color: $brand;
+        &:hover {
+            background-color: $brand;
+            color: $white;
+        }
+    }
+    .button-red {
+        border: solid 1px rgba($red, 0.5);
+        background-color: $white;
+        color: $red;
+        &:hover {
+            background-color: $red;
+            color: $white;
+        }
+    }
+    .button-green {
+        border: solid 1px rgba($green, 0.5);
+        background-color: $white;
+        color: $green;
+        &:hover {
+            background-color: $green;
+            color: $white;
+        }
+    }
+    .button-orange {
+        border: solid 1px rgba($orange, 0.5);
+        background-color: $white;
+        color: $orange;
+        &:hover {
+            background-color: $orange;
+            color: $white;
+        }
+    }
+    .card {
+        background-color: $secondaryDark;
+        .card-header {
+            background-color: $transparent-brand;
+            color: $white;
+        }
+    }
+    .modal {
+        background-color: $transparent-black;
+    }
+    .input-text {
+        input {
+            border: 2px solid $white;
+            background-color: $darkBrand;
+            color: $white;
+        }
+        input:focus {
+            border: 2px solid $brand;
+        }
+        input:focus+label {
+            color: $brand;
+        }
+        label {
+            color: $white;
+            background-color: $darkBrand;
+        }
+    }
+    .control {
+        input {
+            &:focus {
+                ~ {
+                    .control__indicator {
+                        background: $grey;
+                    }
+                }
+            }
+            &:checked {
+                ~ {
+                    .control__indicator {
+                        background: $brand;
+                        &:after {
+                            display: block;
+                        }
+                    }
+                }
+                &:focus {
+                    ~ {
+                        .control__indicator {
+                            background: $brand;
+                        }
+                    }
+                }
+            }
+            &:disabled {
+                ~ {
+                    .control__indicator {
+                        background: $white;
+                        opacity: 0.6;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+        &:hover {
+            input {
+                ~ {
+                    .control__indicator {
+                        background: $brand;
+                    }
+                }
+                &:not([disabled]) {
+                    &:checked {
+                        ~ {
+                            .control__indicator {
+                                background: $brand;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .control__indicator {
+        background: $secondaryGrey;
+    }
+    .control--radio {
+        .control__indicator {
+            &:after {
+                background: $whiteBackground;
+            }
+        }
+        input {
+            &:disabled {
+                ~ {
+                    .control__indicator {
+                        &:after {
+                            background: $grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .control--checkbox {
+        .control__indicator {
+            &:after {
+                border: solid $whiteBackground;
+                background-color: $whiteBackground;
+            }
+            input {
+                &:disabled {
+                    ~ {
+                        .control__indicator {
+                            &:after {
+                                border-color: $grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .select {
+        select {
+            background: $grey;
+            color: $black;
+            ~ {
+                .select__arrow {
+                    border-top-color: $brand;
+                }
+            }
+            &:hover {
+                color: $black;
+                background: $secondaryGrey;
+            }
+            &:focus {
+                color: $black;
+                background: $secondaryGrey;
+            }
+        }
+    }
+    .select__arrow {
+        border-color: $brand transparent transparent transparent;
+    }
+    .default-table {
+        table {
+            thead {
+                background: $brand;
+                color: $white;
+            }
+            tbody tr {
+                background: $secondaryDark;
+                &:hover {
+                    background: $darkBrand;
+                }
+                td,
+                td a {
+                    color: $white;
+                    fa-icon {
+                        color: $white;
+                    }
+                }
+            }
+            tbody tr:nth-child(odd) {
+                background-color: $transparent-brand;
+                color: $white;
+                td,
+                td a {
+                    color: $white;
+                    fa-icon {
+                        color: $white;
+                    }
+                }
+                &:hover {
+                    background-color: $darkBrand;
+                }
+            }
+        }
+    }
+    /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+    .switcher {
+        .switch {
+            background: $lightGrey;
+            &:before {
+                background: $brand;
+            }
+            &:after {
+                background: $transparent-brand;
+            }
+        }
+        input:checked+.switch {
+            background-color: $lightGrey;
+            &:before {
+                background: $brand;
+            }
+            &:after {
+                background: $brand;
+            }
+        }
+    }
+} //END dark mode

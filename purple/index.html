@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ui Toolkit Sandbox</title>
+
+    <link rel="stylesheet" href="./style/ui-components.css">
+    <link rel="stylesheet" href="./style/ui-theme.css">
+    <link rel="stylesheet" href="./style/ui-toolkit-grid.css">
+    <script src="https://kit.fontawesome.com/df99e39eeb.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="light-mode" id="body">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="switcher">
+                        <input id="switchDarkMode" onchange="swtichDarkMode()" type="checkbox" hidden/>
+                        <label for="switchDarkMode" class="switch"></label>
+                        <p>Dark Mode</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <a class="button-default button-main">Button main</a>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-2">
+                    <a class="button-default button-red">Button Red</a>
+                </div>
+                <div class="col-md-2">
+                    <a class="button-default button-green">Button green</a>
+                </div>
+                <div class="col-md-4">
+                    <a class="button-default button-orange">Button orange</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Card Header</div>
+                        <div class="card-content">
+                            <h3>Card Title</h3><br>Card Content<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Card Header</div>
+                        <div class="card-content">
+                            <h3>Card Title</h3><br>Card Content<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat
+                        </div>
+                        <div class="card-button text-right">
+                            <a class="button-default button-green">Action positive</a>
+                            <a class="button-default button-red">Action Negative</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a class="button-default button-main" onclick="showModal()">Show Modal Box</a>
+                </div>
+                <div class="modal" id="modal_1">
+                    <div class="col-md-6 modal-content">
+                        <div class="card">
+                            <div class="card-header">Modal Sample</div>
+                            <div class="card-content">
+                                <h3>Modal Title</h3><br>Modal Content<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat
+                            </div>
+                            <div class="card-button text-right">
+                                <a class="button-default button-green">Action positive</a>
+                                <a class="button-default button-red" onclick="closeModal()">Close Modal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-text">
+                        <input id="name" class="input" type="text" pattern=".+" />
+                        <label class="label" for="name">Input type text</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="control control--checkbox">checkbox 1
+                        <input type="checkbox"/>
+                        <div class="control__indicator"></div>
+                    </label>
+                    <label class="control control--checkbox">checkbox 2
+                        <input type="checkbox"/>
+                        <div class="control__indicator"></div>
+                    </label>
+                    <label class="control control--checkbox">checkbox 3
+                        <input type="checkbox"/>
+                        <div class="control__indicator"></div>
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label class="control control--radio">Radio 1
+                        <input type="radio" name="radio" checked="checked"/>
+                        <div class="control__indicator"></div>
+                    </label>
+                    <label class="control control--radio">Radio 2
+                        <input type="radio" name="radio"/>
+                        <div class="control__indicator"></div>
+                    </label>
+                    <label class="control control--radio">Radio 3
+                        <input type="radio" name="radio"/>
+                        <div class="control__indicator"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="select">
+                        <select>
+                          <option value="">Select</option>
+                          <option value="1">Option 1</option>
+                          <option value="2">Option 2</option>
+                          <option value="2">Option 2</option>
+                          <option value="2">Option 2</option>
+                          <option value="2">Option 2</option>
+                          <option value="2">Option 2</option>
+                        </select>
+                        <div class="select__arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>THead cel 1</th>
+                                <th>THead cel 2</th>
+                                <th>THead cel 3</th>
+                                <th>Icons</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td><i class="fas fa-cube"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td><i class="fas fa-cube"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td><i class="fas fa-cube"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td><i class="fas fa-cube"></i></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td><i class="fas fa-cube"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function showModal() {
+            document.getElementById('modal_1').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal_1').style.display = 'none';
+        }
+
+        /* swtichDarkMode */
+        window.onload = function() {
+            swtichDarkMode()
+
+        };
+
+        function swtichDarkMode() {
+            var checkBox = document.getElementById("switchDarkMode");
+            var body = document.getElementById("body");
+            console.log("checkBox.checked>", checkBox.checked)
+            if (checkBox.checked == false) {
+                body.classList.remove("dark-mode");
+                body.classList.add("light-mode");
+            } else {
+                body.classList.remove("light-mode");
+                body.classList.add("dark-mode")
+            }
+        }
+        /* END swtichDarkMode*/
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+/* CSS Ui-Toolkit Theme */
+.light-mode {
+  color: #201E1E;
+  background-color: #FFFFFF;
+}
+.light-mode .button-main {
+  border: solid 1px #7718B0;
+  background-color: #7718B0;
+  color: #F8F8F8;
+}
+.light-mode .button-main:hover {
+  background-color: #F8F8F8;
+  color: #7718B0;
+}
+.light-mode .button-red {
+  border: solid 1px #DC3545;
+  background-color: #DC3545;
+  color: #F8F8F8;
+}
+.light-mode .button-red:hover {
+  background-color: #F8F8F8;
+  color: #DC3545;
+}
+.light-mode .button-green {
+  border: solid 1px #28A745;
+  background-color: #28A745;
+  color: #F8F8F8;
+}
+.light-mode .button-green:hover {
+  background-color: #F8F8F8;
+  color: #28A745;
+}
+.light-mode .button-orange {
+  border: solid 1px #F39C13;
+  background-color: #F39C13;
+  color: #F8F8F8;
+}
+.light-mode .button-orange:hover {
+  background-color: #F8F8F8;
+  color: #F39C13;
+}
+.light-mode .card {
+  background-color: #f9f9f9;
+}
+.light-mode .card .card-header {
+  background-color: rgba(119, 24, 176, 0.75);
+  color: #F8F8F8;
+}
+.light-mode .modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.light-mode .input-text input {
+  border: 2px solid #9E9E9E;
+}
+.light-mode .input-text input:focus {
+  border: 2px solid #7718B0;
+}
+.light-mode .input-text input:focus + label {
+  color: #7718B0;
+}
+.light-mode .input-text label {
+  color: #9E9E9E;
+  background-color: #FFFFFF;
+}
+.light-mode .control input:focus ~ .control__indicator {
+  background: #9E9E9E;
+}
+.light-mode .control input:checked ~ .control__indicator {
+  background: #7718B0;
+}
+.light-mode .control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.light-mode .control input:checked:focus ~ .control__indicator {
+  background: #7718B0;
+}
+.light-mode .control input:disabled ~ .control__indicator {
+  background: #F8F8F8;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.light-mode .control:hover input ~ .control__indicator {
+  background: #7718B0;
+}
+.light-mode .control:hover input:not([disabled]):checked ~ .control__indicator {
+  background: #7718B0;
+}
+.light-mode .control__indicator {
+  background: #e6e6e6;
+}
+.light-mode .control--radio .control__indicator:after {
+  background: #FFFFFF;
+}
+.light-mode .control--radio input:disabled ~ .control__indicator:after {
+  background: #9E9E9E;
+}
+.light-mode .control--checkbox .control__indicator:after {
+  border: solid #FFFFFF;
+  background-color: #FFFFFF;
+}
+.light-mode .control--checkbox .control__indicator input:disabled ~ .control__indicator:after {
+  border-color: #9E9E9E;
+}
+.light-mode .select select {
+  background: #e6e6e6;
+  color: #6A6A6A;
+}
+.light-mode .select select:hover {
+  color: #201E1E;
+  background: #e6e6e6;
+}
+.light-mode .select select:hover ~ .select__arrow {
+  border-top-color: #7718B0;
+}
+.light-mode .select select:focus {
+  color: #201E1E;
+  background: #e6e6e6;
+}
+.light-mode .select select:focus ~ .select__arrow {
+  border-top-color: #7718B0;
+}
+.light-mode .select select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.light-mode .select select:disabled ~ .select__arrow {
+  border-top-color: #7718B0;
+}
+.light-mode .select__arrow {
+  border-color: #9E9E9E transparent transparent transparent;
+}
+.light-mode .default-table table thead {
+  background: #7718B0;
+  color: #F8F8F8;
+}
+.light-mode .default-table table tbody tr {
+  background: #f9f9f9;
+}
+.light-mode .default-table table tbody tr:hover {
+  background: #e6e6e6;
+}
+.light-mode .default-table table tbody tr td,
+.light-mode .default-table table tbody tr td a {
+  color: #201E1E;
+}
+.light-mode .default-table table tbody tr td fa-icon,
+.light-mode .default-table table tbody tr td a fa-icon {
+  color: #201E1E;
+}
+.light-mode .default-table table tbody tr:nth-child(odd) {
+  background-color: rgba(119, 24, 176, 0.75);
+  color: #F8F8F8;
+}
+.light-mode .default-table table tbody tr:nth-child(odd) td,
+.light-mode .default-table table tbody tr:nth-child(odd) td a {
+  color: #F8F8F8;
+}
+.light-mode .default-table table tbody tr:nth-child(odd) td fa-icon,
+.light-mode .default-table table tbody tr:nth-child(odd) td a fa-icon {
+  color: #F8F8F8;
+}
+.light-mode .default-table table tbody tr:nth-child(odd):hover {
+  background-color: #7718B0;
+}
+.light-mode .switcher .switch {
+  background: #e6e6e6;
+}
+.light-mode .switcher .switch:before {
+  background: #7718B0;
+}
+.light-mode .switcher .switch:after {
+  background: rgba(119, 24, 176, 0.75);
+}
+.light-mode .switcher input:checked + .switch {
+  background-color: #7718B0;
+}
+.light-mode .switcher input:checked + .switch:before {
+  background: #7718B0;
+}
+.light-mode .switcher input:checked + .switch:after {
+  background: rgba(119, 24, 176, 0.75);
+}
+.light-mode .switcher input:checked + .switch:active:before {
+  background: #7718B0;
+}
+
+.dark-mode {
+  color: #F8F8F8;
+  background-color: #341352;
+  /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+}
+.dark-mode .button-main {
+  border: solid 1px rgba(119, 24, 176, 0.5);
+  background-color: #F8F8F8;
+  color: #7718B0;
+}
+.dark-mode .button-main:hover {
+  background-color: #7718B0;
+  color: #F8F8F8;
+}
+.dark-mode .button-red {
+  border: solid 1px rgba(220, 53, 69, 0.5);
+  background-color: #F8F8F8;
+  color: #DC3545;
+}
+.dark-mode .button-red:hover {
+  background-color: #DC3545;
+  color: #F8F8F8;
+}
+.dark-mode .button-green {
+  border: solid 1px rgba(40, 167, 69, 0.5);
+  background-color: #F8F8F8;
+  color: #28A745;
+}
+.dark-mode .button-green:hover {
+  background-color: #28A745;
+  color: #F8F8F8;
+}
+.dark-mode .button-orange {
+  border: solid 1px rgba(243, 156, 19, 0.5);
+  background-color: #F8F8F8;
+  color: #F39C13;
+}
+.dark-mode .button-orange:hover {
+  background-color: #F39C13;
+  color: #F8F8F8;
+}
+.dark-mode .card {
+  background-color: #471F6B;
+}
+.dark-mode .card .card-header {
+  background-color: rgba(119, 24, 176, 0.75);
+  color: #F8F8F8;
+}
+.dark-mode .modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.dark-mode .input-text input {
+  border: 2px solid #F8F8F8;
+  background-color: #341352;
+  color: #F8F8F8;
+}
+.dark-mode .input-text input:focus {
+  border: 2px solid #7718B0;
+}
+.dark-mode .input-text input:focus + label {
+  color: #7718B0;
+}
+.dark-mode .input-text label {
+  color: #F8F8F8;
+  background-color: #341352;
+}
+.dark-mode .control input:focus ~ .control__indicator {
+  background: #9E9E9E;
+}
+.dark-mode .control input:checked ~ .control__indicator {
+  background: #7718B0;
+}
+.dark-mode .control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.dark-mode .control input:checked:focus ~ .control__indicator {
+  background: #7718B0;
+}
+.dark-mode .control input:disabled ~ .control__indicator {
+  background: #F8F8F8;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.dark-mode .control:hover input ~ .control__indicator {
+  background: #7718B0;
+}
+.dark-mode .control:hover input:not([disabled]):checked ~ .control__indicator {
+  background: #7718B0;
+}
+.dark-mode .control__indicator {
+  background: #e6e6e6;
+}
+.dark-mode .control--radio .control__indicator:after {
+  background: #FFFFFF;
+}
+.dark-mode .control--radio input:disabled ~ .control__indicator:after {
+  background: #9E9E9E;
+}
+.dark-mode .control--checkbox .control__indicator:after {
+  border: solid #FFFFFF;
+  background-color: #FFFFFF;
+}
+.dark-mode .control--checkbox .control__indicator input:disabled ~ .control__indicator:after {
+  border-color: #9E9E9E;
+}
+.dark-mode .select select {
+  background: #9E9E9E;
+  color: #201E1E;
+}
+.dark-mode .select select ~ .select__arrow {
+  border-top-color: #7718B0;
+}
+.dark-mode .select select:hover {
+  color: #201E1E;
+  background: #e6e6e6;
+}
+.dark-mode .select select:focus {
+  color: #201E1E;
+  background: #e6e6e6;
+}
+.dark-mode .select__arrow {
+  border-color: #7718B0 transparent transparent transparent;
+}
+.dark-mode .default-table table thead {
+  background: #7718B0;
+  color: #F8F8F8;
+}
+.dark-mode .default-table table tbody tr {
+  background: #471F6B;
+}
+.dark-mode .default-table table tbody tr:hover {
+  background: #341352;
+}
+.dark-mode .default-table table tbody tr td,
+.dark-mode .default-table table tbody tr td a {
+  color: #F8F8F8;
+}
+.dark-mode .default-table table tbody tr td fa-icon,
+.dark-mode .default-table table tbody tr td a fa-icon {
+  color: #F8F8F8;
+}
+.dark-mode .default-table table tbody tr:nth-child(odd) {
+  background-color: rgba(119, 24, 176, 0.75);
+  color: #F8F8F8;
+}
+.dark-mode .default-table table tbody tr:nth-child(odd) td,
+.dark-mode .default-table table tbody tr:nth-child(odd) td a {
+  color: #F8F8F8;
+}
+.dark-mode .default-table table tbody tr:nth-child(odd) td fa-icon,
+.dark-mode .default-table table tbody tr:nth-child(odd) td a fa-icon {
+  color: #F8F8F8;
+}
+.dark-mode .default-table table tbody tr:nth-child(odd):hover {
+  background-color: #341352;
+}
+.dark-mode .switcher .switch {
+  background: #f9f9f9;
+}
+.dark-mode .switcher .switch:before {
+  background: #7718B0;
+}
+.dark-mode .switcher .switch:after {
+  background: rgba(119, 24, 176, 0.75);
+}
+.dark-mode .switcher input:checked + .switch {
+  background-color: #f9f9f9;
+}
+.dark-mode .switcher input:checked + .switch:before {
+  background: #7718B0;
+}
+.dark-mode .switcher input:checked + .switch:after {
+  background: #7718B0;
+}
+
+/*# sourceMappingURL=ui-theme.css.map */
