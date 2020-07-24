@@ -275,6 +275,27 @@ $red: #DC3545;
             }
         }
     }
+    .info-card {
+        &:hover .info-icon,
+        &:hover i {
+            color: $brand;
+        }
+    }
+    .tabs {
+        a {
+            color: $grey;
+            border-bottom: 2px solid $grey;
+            background-color: $secondaryGrey;
+            &:hover {
+                background: $lightGrey;
+            }
+        }
+        a.active {
+            background: $whiteBackground;
+            border-bottom: 2px solid $brand;
+            color: $black;
+        }
+    }
 } //END light mode
 .dark-mode {
     color: $white;
@@ -513,6 +534,30 @@ $red: #DC3545;
             &:after {
                 background: $brand;
             }
+        }
+    }
+    .info-card {
+        background-color: $transparent-brand2;
+        color: $secondaryGrey;
+        &:hover .info-icon,
+        &:hover i {
+            color: $white;
+        }
+    }
+    .tabs {
+        a {
+            color: $lightGrey;
+            border-bottom: 2px solid $lightGrey;
+            background-color: $transparent-brand2;
+            &:hover {
+                background: $secondaryGrey;
+                color: $black;
+            }
+        }
+        a.active {
+            background: $secondaryDark;
+            border-bottom: 2px solid $brand;
+            color: $white;
         }
     }
 } //END dark mode
