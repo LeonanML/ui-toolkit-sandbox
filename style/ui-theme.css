@@ -183,6 +183,9 @@
 .light-mode .switcher input:checked + .switch:active:before {
   background: #11998E;
 }
+.light-mode .info-card:hover .info-icon, .light-mode .info-card:hover i {
+  color: #11998E;
+}
 
 .dark-mode {
   color: #F8F8F8;
@@ -357,6 +360,13 @@
 }
 .dark-mode .switcher input:checked + .switch:after {
   background: #11998E;
+}
+.dark-mode .info-card {
+  background-color: rgba(17, 153, 142, 0.5);
+  color: #e6e6e6;
+}
+.dark-mode .info-card:hover .info-icon, .dark-mode .info-card:hover i {
+  color: #F8F8F8;
 }
 
 /*# sourceMappingURL=ui-theme.css.map */

@@ -275,6 +275,12 @@ $red: #DC3545;
             }
         }
     }
+    .info-card {
+        &:hover .info-icon,
+        &:hover i {
+            color: $brand;
+        }
+    }
 } //END light mode
 .dark-mode {
     color: $white;
@@ -513,6 +519,14 @@ $red: #DC3545;
             &:after {
                 background: $brand;
             }
+        }
+    }
+    .info-card {
+        background-color: $transparent-brand2;
+        color: $secondaryGrey;
+        &:hover .info-icon,
+        &:hover i {
+            color: $white;
         }
     }
 } //END dark mode
